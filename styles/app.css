@@ -1,0 +1,363 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --body-background-color: hsl(210, 100%, 100%);
+  --font-family: "Hanken Grotesk", sans-serif;
+  --color-light-red: 0, 100%, 67%;
+  --color-orange-yellow: 39, 100%, 56%;
+  --color-green-teal: 166, 100%, 37%;
+  --color-cobalt-blue: 234, 85%, 45%;
+  --gradient-light-slate-blue: hsl(252, 100%, 67%);
+  --gradient-light-royal-blue: hsl(241, 81%, 54%);
+  --gradient-violet-blue: hsla(256, 72%, 46%, 1);
+  --gradient-persian-blue: hsla(241, 72%, 46%, 0);
+  --color-white: hsl(0, 0%, 100%);
+  --color-pale-blue: hsl(221, 100%, 96%);
+  --color-light-lavender: hsl(241, 100%, 89%);
+  --color-dark-gray-blue: hsl(224, 30%, 27%);
+  --color-dark-gray-blue-darken: hsla(224, 30%, 27%, 0.9);
+  --color-dark-gray-blue-50: hsla(224, 30%, 27%, 0.5);
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  font-size: 1.125rem;
+  color: var(--color-white);
+  background-color: var(--body-background);
+}
+
+ul {
+  list-style: none;
+}
+
+ul,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  margin: auto;
+  width: 100%;
+  max-width: 1440px;
+}
+@media (min-width: 47.0625em) {
+  .wrap {
+    height: 100vh;
+    display: grid;
+  }
+}
+
+.font-normal {
+  font-style: normal;
+}
+
+.title {
+  font-size: 1.125rem;
+}
+.title.-small {
+  font-size: 1rem;
+}
+.title.-large {
+  font-size: 1.375rem;
+}
+@media (min-width: 47.0625em) {
+  .title.-large {
+    font-size: 1.875rem;
+  }
+}
+
+.component-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(368px, 1fr));
+}
+@media (min-width: 47.0625em) {
+  .component-card {
+    place-content: center;
+    max-width: 737px;
+    margin: auto;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 40px 10px 50px 0px hsla(var(--color-cobalt-blue), 6%);
+  }
+}
+
+.result {
+  background-image: linear-gradient(180deg, var(--gradient-light-slate-blue) -30%, var(--gradient-light-royal-blue));
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  padding: 25px 30px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  text-align: center;
+}
+.result > .title {
+  font-size: 1.125rem;
+  color: var(--color-light-lavender);
+}
+@media (min-width: 47.0625em) {
+  .result > .title {
+    font-size: 1.4375rem;
+  }
+}
+@media (min-width: 47.0625em) {
+  .result {
+    gap: 35px;
+    border-radius: 30px;
+    padding: 40px 70px 60px;
+  }
+}
+
+.badge {
+  background-image: linear-gradient(180deg, var(--gradient-violet-blue), var(--gradient-persian-blue));
+  border-radius: 50%;
+  height: 140px;
+  width: 140px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+.badge > .score {
+  color: var(--color-white);
+  margin: 0;
+  font-size: 3.5625rem;
+}
+@media (min-width: 47.0625em) {
+  .badge > .score {
+    font-size: 4.375rem;
+  }
+}
+.badge > .all {
+  color: var(--color-light-lavender);
+}
+@media (min-width: 47.0625em) {
+  .badge {
+    height: 190px;
+    width: 190px;
+    padding: 40px;
+  }
+}
+
+.article > .title {
+  color: var(--color-white);
+  margin: 0 0 10px;
+}
+@media (min-width: 47.0625em) {
+  .article > .title {
+    margin: 0 0 15px;
+  }
+}
+.article > .description {
+  color: var(--color-light-lavender);
+  margin: 0;
+  font-size: 1rem;
+}
+@media (min-width: 47.0625em) {
+  .article > .description {
+    line-height: 1.4;
+  }
+}
+
+.summary {
+  color: var(--color-light-lavender);
+  padding: 25px 30px;
+}
+@media (min-width: 47.0625em) {
+  .summary {
+    padding: 40px;
+  }
+}
+.summary > .title {
+  color: var(--color-dark-gray-blue);
+}
+@media (min-width: 47.0625em) {
+  .summary > .title {
+    font-size: 1.4375rem;
+  }
+}
+.summary > .list {
+  margin-top: 20px;
+}
+@media (min-width: 47.0625em) {
+  .summary > .list {
+    margin-top: 26px;
+  }
+}
+.summary > .list > * + * {
+  margin-top: 15px;
+}
+.summary > .list > .item {
+  border-radius: 10px;
+  padding: 18px;
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 47.0625em) {
+  .summary > .list > .item {
+    font-size: 1.25rem;
+    padding: 16px;
+  }
+}
+.summary .item > [class^=icon-] {
+  width: 20px;
+}
+.summary .item > .title {
+  margin-right: auto;
+  margin-left: 12px;
+}
+.summary .item > .number {
+  color: var(--color-dark-gray-blue-50);
+}
+.summary .item > .number > em {
+  color: var(--color-dark-gray-blue);
+}
+.summary .item.-red {
+  background-color: hsla(var(--color-light-red), 0.1);
+  color: hsla(var(--color-light-red), 1);
+}
+.summary .item.-yellow {
+  background-color: hsla(var(--color-orange-yellow), 0.1);
+  color: hsla(var(--color-orange-yellow), 1);
+}
+.summary .item.-green {
+  background-color: hsla(var(--color-green-teal), 0.1);
+  color: hsla(var(--color-green-teal), 1);
+}
+.summary .item.-blue {
+  background-color: hsla(var(--color-cobalt-blue), 0.1);
+  color: hsla(var(--color-cobalt-blue), 1);
+}
+.summary > .button {
+  background: var(--color-dark-gray-blue);
+  color: var(--color-white);
+  font-size: 1.125rem;
+  line-height: 1;
+  border: 0;
+  padding: 20px;
+  border-radius: 30px;
+  width: 100%;
+  margin-top: 25px;
+  font-weight: 700;
+  height: 54px;
+  cursor: pointer;
+}
+@media (min-width: 47.0625em) {
+  .summary > .button {
+    margin-top: 40px;
+  }
+}
+.summary > .button:hover {
+  background: var(--color-dark-gray-blue-darken);
+}
+.summary > .button:active {
+  background: linear-gradient(180deg, var(--gradient-light-slate-blue), var(--gradient-light-royal-blue));
+}
+
+.icon-1 {
+  position: relative;
+  height: 23px;
+  width: 20px;
+  background-image: linear-gradient(180deg, hsl(var(--color-light-red)) 0%, hsl(var(--color-light-red)) 100%), linear-gradient(180deg, hsl(var(--color-light-red)) 0%, hsl(var(--color-light-red)) 100%), linear-gradient(180deg, hsl(var(--color-light-red)) 0%, hsl(var(--color-light-red)) 100%), linear-gradient(180deg, hsl(var(--color-light-red)) 0%, hsl(var(--color-light-red)) 100%), linear-gradient(125deg, rgba(255, 87, 87, 0) 75%, hsl(var(--color-light-red)) 77%, hsl(var(--color-light-red)) 80%, rgba(255, 87, 87, 0) 82%), linear-gradient(125deg, rgba(255, 87, 87, 0) 35%, hsl(var(--color-light-red)) 37%, hsl(var(--color-light-red)) 42%, rgba(255, 87, 87, 0) 44%);
+  background-position: 10px 10px, 9px 5px, 3px 13px, 8px 13px, -4px -10px, 8px 10px;
+  background-repeat: no-repeat;
+  background-size: 5px 1px, 1px 6px, 5px 1px, 1px 7px, 14px 24px, 8px 14px;
+}
+
+.icon-2 {
+  position: relative;
+  height: 23px;
+  width: 15px;
+  transform: scale(1);
+  background: linear-gradient(hsla(var(--color-orange-yellow), 1), hsla(var(--color-orange-yellow), 1)), linear-gradient(45deg, transparent 50%, hsla(var(--color-orange-yellow), 1) 50%, transparent 52%);
+  background-repeat: no-repeat;
+  background-size: 1px 15px, 5px 3px;
+  background-position: 7px 5px, 7px 9px;
+}
+.icon-2::after, .icon-2::before {
+  content: "";
+  position: absolute;
+  background-image: radial-gradient(circle at 40% 90%, transparent 30%, hsla(var(--color-orange-yellow), 1) 40%, hsla(var(--color-orange-yellow), 1) 50%, transparent 60%), radial-gradient(circle at 20% 70%, transparent 30%, hsla(var(--color-orange-yellow), 1) 50%, hsla(var(--color-orange-yellow), 1) 50%, transparent 60%), radial-gradient(circle at 0% 50%, transparent 30%, hsla(var(--color-orange-yellow), 1) 50%, hsla(var(--color-orange-yellow), 1) 50%, transparent 60%), radial-gradient(circle at 10% 50%, transparent 30%, hsla(var(--color-orange-yellow), 1) 50%, hsla(var(--color-orange-yellow), 1) 60%, transparent 60%), radial-gradient(circle at 40% 20%, transparent 30%, hsla(var(--color-orange-yellow), 1) 50%, hsla(var(--color-orange-yellow), 1) 60%, transparent 60%);
+  background-size: 6px 6px, 6px 6px, 6px 6px, 6px 6px, 5px 4px;
+  background-repeat: no-repeat;
+  background-position: 0 0, 4px 4px, 6px 9px, 4px 13px, 1px 19px;
+  height: 100%;
+  width: 100%;
+  transform: translate(7px, 0);
+}
+.icon-2::after {
+  transform: rotate(180deg) translate(12px, -1px);
+}
+
+.icon-3 {
+  position: relative;
+  height: 21px;
+  width: 21px;
+  background: linear-gradient(hsla(var(--color-green-teal), 1), hsla(var(--color-green-teal), 1));
+  background-repeat: no-repeat;
+  background-size: 6px 1px;
+  background-position: 5px 12px;
+}
+.icon-3::before, .icon-3::after {
+  content: "";
+  position: absolute;
+}
+.icon-3::before {
+  background-image: radial-gradient(circle at 50% 14px, transparent 40%, hsla(var(--color-green-teal), 1) 50%, hsla(var(--color-green-teal), 1) 50%, transparent 53%);
+  background-repeat: no-repeat;
+  background-size: 22px;
+  background-position: -1px 0px;
+  width: 100%;
+  height: 100%;
+  transform: rotate(45deg);
+}
+.icon-3::after {
+  border-left: 1px solid;
+  width: 7px;
+  height: 7px;
+  border-bottom: 1px solid;
+  position: absolute;
+  transform: skew(358deg, 355deg);
+  bottom: 0px;
+  left: -1px;
+}
+
+.icon-4 {
+  position: relative;
+  height: 13px;
+}
+.icon-4::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  border: 1px solid;
+  left: 6px;
+  top: 2px;
+}
+.icon-4::after {
+  content: "";
+  border-radius: 60% 0;
+  width: 17px;
+  height: 9px;
+  border: 1px solid;
+  transform: skew(0deg, 323deg) rotate(60deg);
+  position: absolute;
+}/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png" />
+    <title>Results summary component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/app.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="component-card">
+        <div class="result">
+          <h3 class="title">Your Result</h3>
+          <div class="badge">
+            <h2 class="score">76</h2>
+            <span class="all">of 100</span>
+          </div>
+          <article class="article">
+            <h4 class="title -large">Great</h4>
+            <p class="description">
+              You scored higher than 65% of the people who have taken these
+              tests.
+            </p>
+          </article>
+        </div>
+        <div class="summary">
+          <h3 class="title">Summary</h3>
+          <ul class="list">
+            <li class="item -red">
+              <i class="icon-1"></i>
+              <span class="title -small">Reaction</span>
+              <span class="number"><em class="font-normal">80</em> / 100</span>
+            </li>
+            <li class="item -yellow">
+              <i class="icon-2"></i>
+              <span class="title -small">Memory</span>
+              <span class="number"><em class="font-normal">92</em> / 100</span>
+            </li>
+            <li class="item -green">
+              <i class="icon-3"></i>
+              <span class="title -small">Verbal</span>
+              <span class="number"><em class="font-normal">61</em> / 100</span>
+            </li>
+            <li class="item -blue">
+              <i class="icon-4"></i>
+              <span class="title -small">Visual</span>
+              <span class="number"><em class="font-normal">72</em> / 100</span>
+            </li>
+          </ul>
+          <button role="button" type="button" class="button">Continue</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
