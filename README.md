@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/results-summary-component-custom-css-icons-yCMgL1Q-JJ](https://www.frontendmentor.io/solutions/results-summary-component-custom-css-icons-yCMgL1Q-JJ)
 - Live Site URL: [https://results-summary-component-sandy.vercel.app/](https://results-summary-component-sandy.vercel.app/)
 
 ## My process
