@@ -79,9 +79,11 @@ h3 {
   }
 }
 
-.component-card {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(368px, 1fr));
+@media (min-width: 23.4375em) {
+  .component-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(368px, 1fr));
+  }
 }
 @media (min-width: 47.0625em) {
   .component-card {

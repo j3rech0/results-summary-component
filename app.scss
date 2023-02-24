@@ -89,8 +89,10 @@ h3 {
   }
 }
 .component-card {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(368px, 1fr));
+  @include bp(375) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(368px, 1fr));
+  }
   @include bp(753) {
     place-content: center;
     max-width: 737px;
